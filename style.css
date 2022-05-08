@@ -7,11 +7,13 @@
 :root {
     font-size: 62.5%; /* 1 rem = 10px */
     --Pc-brand-green: #00856F;
+    --Pc-brand-hover: #00453A;
     --Pc-brand-beige:#FFFAF1;
     --Pc-brand-greenlight: #DCE9E2;
     --Pc-brand-greenlight2: #F7F9F9;
     --Sc-Headline: #212529;
     --Sc-paragraph: #495057;
+
 
     --nav-height: 7.2rem;
 }
@@ -122,7 +124,7 @@ body.menu-expanded .menu {
     transform: translateY(0);
 }
 
-nav .social-links {
+.social-links {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,6 +312,8 @@ section.header1 {
 
     border: 1px solid var(--Pc-brand-greenlight);
     border-radius: .6rem;
+
+    margin-inline: 2.4rem;
 }
 #services .card h3 {
     font-size: 2.4rem;
@@ -325,9 +329,15 @@ section.header1 {
     color: var(--Sc-paragraph);
 }
 
-/*======================================= ABOUT =================================================*/
-#about h4, h2, p {
+/*================================== ABOUT======================================*/
+#about .TamanhoPage {
+    background-color: var(--Pc-brand-beige);
+}
+#about h4,
+#about h2,
+#about p {
     text-align: left;
+    margin-inline: 2.4rem;
 }
 #about header h4 {
     font-size: 1.4rem;
@@ -356,13 +366,21 @@ section.header1 {
     margin-bottom: 6rem;
 }
 #about .content img {
-    width: 37.5rem;
+    width: 32.7rem;
     height: 28.2rem;
 
 }
 /*============================= CONTACT =========================================*/
 #contact{
     text-align: left;
+}
+#contact h2,
+#contact li,
+#contact a {
+    margin-left: 2.4rem;
+}
+#contact .TamanhoPage {
+    background-color: white;
 }
 #contact header h2{
     font-weight: 700;
@@ -396,32 +414,55 @@ section.header1 {
     display: inline-block;
     margin-bottom: 6rem;
 }
+#contact img {
+    width: 32.4rem;
+    height: 21.3rem;
+
+    margin-left: 2.7rem;
+}
 /*=============================== FOOTER ===================================*/
 footer {
     text-align: left;
     background-color: var(--Pc-brand-green);
+    padding-block: 6rem;
 }
 
 footer a {
     display: inline-block;
-    margin-top: 6rem;
     margin-left: 2.6rem;
     margin-bottom: 2.4rem;
 }
-footer .direitos{
-    margin-left: 2.4rem;
-}
-footer .direitos p {
+footer p {
     font-size: 1.6rem;
     line-height: 2.1rem;
 
     color: var(--Pc-brand-beige);
-}
-footer .social-links {
+    margin-bottom: 1.2rem;
     margin-left: 2.4rem;
 }
-footer .social-links ul{
-    display: flex;
-    flex-direction: row;
+footer p:nth-child(2) {
+    margin-bottom: 3.2rem;
+}
+footer .social-links{
+    width: 25rem;
+    height: 10rem;
+  justify-content: flex-start;
+  transform: translateY(20%);
+}
 
+#backToTopButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 200ms;
+    transform: translatey(100%);
+}
+#backToTopButton.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
